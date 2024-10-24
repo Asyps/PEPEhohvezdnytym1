@@ -1,0 +1,9 @@
+public BufferedImage makeColoredImage(){
+  BufferedImage bImage = new BufferedImage(2000, 2000, BufferedImage.TYPE_3BYTE_BGR);
+  for (int x = 0; x < bImage.getWidth(); x++){
+     for (int y = 0; y < bImage.getHeight(); y++){
+       bImage.setRGB(x, y, (new Color(x%255,y%255,(x+y)%255).getRGB()));
+   }
+ }
+ return bImage;
+}

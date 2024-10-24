@@ -2,9 +2,11 @@ public BufferedImage makeColoredImage() {
     BufferedImage bImage = new BufferedImage(2000, 2000, BufferedImage.TYPE_3BYTE_BGR);
     for (int x = 0; x < bImage.getWidth(); x++){
         for (int y = 0; y < bImage.getHeight(); y++){
+            x -= 1000;
+            y -= 1000;
 
             float[2] z = [0, 0];
-            float[2] C = [x, y];
+            float[2] C = [x/1000, y/1000];
 
             // (a + bi)^2 = a^2 + 2abi + b^2i^2 = (a˘2-b˘2) + 2abi
             // [a, b] * [a, b] = [a˘2 - b^2, 2*a*b]

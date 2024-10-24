@@ -1,9 +1,26 @@
-public BufferedImage makeColoredImage(){
-  BufferedImage bImage = new BufferedImage(2000, 2000, BufferedImage.TYPE_3BYTE_BGR);
-  for (int x = 0; x < bImage.getWidth(); x++){
-     for (int y = 0; y < bImage.getHeight(); y++){
-       bImage.setRGB(x, y, (new Color(x%255,y%255,(x+y)%255).getRGB()));
-   }
- }
- return bImage;
+public BufferedImage makeColoredImage() {
+    BufferedImage bImage = new BufferedImage(2000, 2000, BufferedImage.TYPE_3BYTE_BGR);
+    for (int x = 0; x < bImage.getWidth(); x++){
+        for (int y = 0; y < bImage.getHeight(); y++){
+            z = [0, 0];
+            C = [x, y];
+
+            // (a + bi)^2 = a^2 + 2abi + b^2i^2 = (a˘2-b˘2) + 2abi
+            // [a, b] * [a, b] = [a˘2 - b^2, 2*a*b]
+            // [a, b] * [a, b] + [c, d] =
+            // [z[0]**2 - z[1]**2 + C[0], 2*z[0]*z[1] + C[1]]
+
+            for (int i = 0; i < 1000; i++) {
+                z = [z[0]**2 - z[1]**2 + C[0], 2*z[0]*z[1] + C[1]];
+
+                if (z[0]**2 + z[1]**2 > 2) {
+
+                }
+
+            }
+
+            bImage.setRGB(x, y, (new Color(x%255,y%255,(x+y)%255).getRGB()));
+        }
+    }
+    return bImage;
 }

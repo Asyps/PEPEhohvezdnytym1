@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pepehohvezdnytym1.Bestscena">
+   <children>
+      <Button fx:id="LoadImage" layoutX="516.0" layoutY="21.0" mnemonicParsing="false" onAction="displayImage();" text="Button" />
+      <ImageView fx:id="MainImage" fitHeight="359.0" fitWidth="477.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
